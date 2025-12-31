@@ -1,0 +1,225 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e8ecf3);
+  min-height: 100vh;
+  padding: 20px;
+  color: #222;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #1f2937;
+  color: white;
+  padding: 16px 25px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.navbar h2 {
+  font-size: 22px;
+}
+
+.navbar button {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar button:hover {
+  background: #dc2626;
+}
+
+/* ===== CARDS ===== */
+.card {
+  max-width: 420px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* ===== INPUTS ===== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.2);
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 6px;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+button.danger {
+  background: #ef4444;
+}
+
+button.danger:hover {
+  background: #dc2626;
+}
+
+/* ===== LINKS ===== */
+.link {
+  text-align: center;
+  margin-top: 12px;
+  color: #4f46e5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===== TICKETS GRID ===== */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ===== TICKET CARD ===== */
+.ticket {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+.ticket:hover {
+  transform: translateY(-3px);
+}
+
+.ticket h3 {
+  color: #111827;
+}
+
+.ticket p {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* ===== STATUS BADGES ===== */
+.ticket b {
+  color: #111827;
+}
+
+.ticket p b + span,
+.ticket p b {
+  font-weight: 600;
+}
+
+.ticket p:last-child {
+  font-weight: 500;
+}
+
+/* ===== STATUS COLORS ===== */
+.ticket p:has(span.open),
+.ticket p:contains("open") {
+  color: #2563eb;
+}
+
+.ticket p:contains("in-progress") {
+  color: #f59e0b;
+}
+
+.ticket p:contains("closed") {
+  color: #16a34a;
+}
+
+/* ===== ADMIN SELECT ===== */
+select {
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    margin: 20px;
+  }
+}
+
+
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+}
+
+.password-box .toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.password-box .toggle:hover {
+  opacity: 1;
+}

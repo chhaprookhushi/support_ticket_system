@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Register</h2>
+    <input id="name" placeholder="Name" />
+    <input id="email" placeholder="Email" />
+    <div class="password-box">
+      <input type="password" id="password" placeholder="Password" />
+      <span class="toggle" onclick="togglePassword()">👁</span>
+    </div>
+    <button onclick="register()">Register</button>
+    <p class="link" onclick="goLogin()">Back to Login</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
